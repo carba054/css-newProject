@@ -4,23 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="{{ site.baseurl }}/css/site.css">
-
+    <script>
+            window.addEventListener('load', (event) => {
+                document.querySelector('body').classList.add('loaded');
+            });
+        </script>
 </head>
 <body class="page-{{ page.title | slugify }}">
         
-        <div class="test">
+        <!-- <div class="test">
             
-        </div>
+        </div> -->
         
         <!-- <iframe style='position: absolute; margin-left:10%' width="80%" height="100%" frameborder="0" src="https://www.youtube.com/embed/h-k3Ln-yLiU?autoplay=1&controls=0&loop=1&playlist=cTYuscQu-Og" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
          -->
-        <!-- <video style='position: absolute; margin-left:10%' width="80%" data-mute="true" loop muted autoplay>
-                <source src="https://solarsystem.nasa.gov/system/feature_items/webm_videos/515_MED_saturn_time_lapse_0001.webm
-                " type="video/webm">
-                
-        </video> -->
+         <!-- <div class="page-video">
+            <video style='position: absolute; margin-left:10%' width="80%" data-mute="true" loop muted autoplay>
+                    <source src="https://solarsystem.nasa.gov/system/feature_items/webm_videos/515_MED_saturn_time_lapse_0001.webm
+                    " type="video/webm">
+                        
+            </video>
+         </div> -->
+        
         <input type="checkbox" id="site-nav-toggle" class="site-nav-toggle">
     <div class="site">
         
@@ -28,7 +35,7 @@
             <div class="site-wrapper">
                 <div class="site-branding">
                     <h1 class="site-title"><a href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
-                    <p>{{ site.description }}</p>
+                    <!-- <p>{{ site.description }}</p> -->
                 </div>
 
                 {% include navigation.html location="header" %}
@@ -36,7 +43,9 @@
         </header>
         <main class="site-content">
             <div class="site-wrapper">
-                <!-- {{ content }} -->
+                {{ content }}
+
+                
             </div>
         </main>
 <!-- {% include footer.html location="header" %} -->

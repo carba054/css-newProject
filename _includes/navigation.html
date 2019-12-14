@@ -1,40 +1,32 @@
 <label for="site-nav-toggle" class="site-nav-toggle-label">Menu</label>
-<nav class="site-nav location-{{ include.location }}">
-    <ul>
-
-    {% assign navigation_pages = site.pages | sort:"order" %}
-
-    {% for current_page in navigation_pages %}
-        {% if current_page.title %}
-
-        <li class="page-title-{{ current_page.title | slugify }}{% if current_page.url == page.url %} current-page{% endif %}">
-            <a href="{{ site.baseurl }}{{ current_page.url }}">{{ current_page.title }}</a>
-
-            <!-- {% if current_page.title == 'Services' %}
-                <ul>
-                    <li><a href="#">Software</a></li>
-                    <li>
-                        <a href="#">Cloud</a>
-                        <ul>
-                            <li><a href="#">Software</a></li>
-                            <li>
-                                <a href="#">Cloud</a>
-                                
+    <nav class="site-nav location-{{ include.location }} ">
+            <a href="{{ site.baseurl }}">Home</a>
+        <div class="dropdown">
+            <a href="/" onclick="return false;">Planets</a></li>
+            <div class="dropdown-content ">
+                    <ul>
+                    {% assign navigation_pages = site.pages | sort:"order" %}
+        
+                    {% for current_page in navigation_pages %}
+                        {% if current_page.title %}
+                            <li class="page-title-{{ current_page.title | slugify }}{% if current_page.url == page.url %} current-page{% endif %}">
+                                <a href="{{ site.baseurl }}{{ current_page.url }}">{{ current_page.title }}</a>
                             </li>
-                            <li><a href="#">Management</a></li>
-                            <li><a href="#">Slack</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Management</a></li>
-                    <li><a href="#">Slack</a></li>
-                </ul>
-            {% endif %} -->
-        </li>
-        {% endif %}
-    {% endfor %}
-    </ul>
-
-    {% if include.location == 'header' %}
+                        {% endif %}
+                    {% endfor %}
+                    </ul>
+                </div>
+        </div>
+        
     
-    {% endif %}
-</nav>
+    </nav>
+    <script>
+            $('.dropdown').click(function() {
+                if($('.dropdown-content').css('display') == 'none'){
+                    $('.dropdown-content').show('slow');
+                }else{
+                    $('.dropdown-content').hide('slow');
+                }
+                
+            });
+        </script>

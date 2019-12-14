@@ -4,23 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="/css-newProject/css/site.css">
-
+    <script>
+            window.addEventListener('load', (event) => {
+                document.querySelector('body').classList.add('loaded');
+            });
+        </script>
 </head>
 <body class="page-saturn">
         
-        <div class="test">
+        <!-- <div class="test">
             
-        </div>
+        </div> -->
         
         <!-- <iframe style='position: absolute; margin-left:10%' width="80%" height="100%" frameborder="0" src="https://www.youtube.com/embed/h-k3Ln-yLiU?autoplay=1&controls=0&loop=1&playlist=cTYuscQu-Og" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
          -->
-        <!-- <video style='position: absolute; margin-left:10%' width="80%" data-mute="true" loop muted autoplay>
-                <source src="https://solarsystem.nasa.gov/system/feature_items/webm_videos/515_MED_saturn_time_lapse_0001.webm
-                " type="video/webm">
-                
-        </video> -->
+         <!-- <div class="page-video">
+            <video style='position: absolute; margin-left:10%' width="80%" data-mute="true" loop muted autoplay>
+                    <source src="https://solarsystem.nasa.gov/system/feature_items/webm_videos/515_MED_saturn_time_lapse_0001.webm
+                    " type="video/webm">
+                        
+            </video>
+         </div> -->
+        
         <input type="checkbox" id="site-nav-toggle" class="site-nav-toggle">
     <div class="site">
         
@@ -28,74 +35,110 @@
             <div class="site-wrapper">
                 <div class="site-branding">
                     <h1 class="site-title"><a href="/css-newProject/">CSS Project</a></h1>
-                    <p>HI</p>
+                    <!-- <p>HI</p> -->
                 </div>
 
                 <label for="site-nav-toggle" class="site-nav-toggle-label">Menu</label>
-<nav class="site-nav location-header">
-    <ul>
-
-    
-
-    
+    <nav class="site-nav location-header ">
+            <a href="/css-newProject">Home</a>
+        <div class="dropdown">
+            <a href="/" onclick="return false;">Planets</a></li>
+            <div class="dropdown-content ">
+                    <ul>
+                    
+        
+                    
+                        
+                    
+                        
+                    
+                        
+                            <li class="page-title-home">
+                                <a href="/css-newProject/">Home</a>
+                            </li>
+                        
+                    
+                        
+                            <li class="page-title-sun">
+                                <a href="/css-newProject/sun/">sun</a>
+                            </li>
+                        
+                    
+                        
+                            <li class="page-title-mercury">
+                                <a href="/css-newProject/mercury/">mercury</a>
+                            </li>
+                        
+                    
+                        
+                            <li class="page-title-venus">
+                                <a href="/css-newProject/venus/">venus</a>
+                            </li>
+                        
+                    
+                        
+                            <li class="page-title-earth">
+                                <a href="/css-newProject/earth/">Earth</a>
+                            </li>
+                        
+                    
+                        
+                            <li class="page-title-mars">
+                                <a href="/css-newProject/mars/">mars</a>
+                            </li>
+                        
+                    
+                        
+                            <li class="page-title-jupiter">
+                                <a href="/css-newProject/jupiter/">jupiter</a>
+                            </li>
+                        
+                    
+                        
+                            <li class="page-title-saturn current-page">
+                                <a href="/css-newProject/saturn/">saturn</a>
+                            </li>
+                        
+                    
+                        
+                            <li class="page-title-uranus">
+                                <a href="/css-newProject/uranus/">uranus</a>
+                            </li>
+                        
+                    
+                        
+                            <li class="page-title-neptune">
+                                <a href="/css-newProject/neptune/">neptune</a>
+                            </li>
+                        
+                    
+                        
+                            <li class="page-title-pluto">
+                                <a href="/css-newProject/pluto/">pluto</a>
+                            </li>
+                        
+                    
+                    </ul>
+                </div>
+        </div>
         
     
-        
-
-        <li class="page-title-home">
-            <a href="/css-newProject/">Home</a>
-
-            <!--  -->
-        </li>
-        
-    
-        
-    
-        
-
-        <li class="page-title-planets">
-            <a href="/css-newProject/planets/">planets</a>
-
-            <!--  -->
-        </li>
-        
-    
-        
-
-        <li class="page-title-abv">
-            <a href="/css-newProject/abv/">Abv</a>
-
-            <!--  -->
-        </li>
-        
-    
-        
-
-        <li class="page-title-saturn current-page">
-            <a href="/css-newProject/saturn/">saturn</a>
-
-            <!--  -->
-        </li>
-        
-    
-        
-
-        <li class="page-title-venus">
-            <a href="/css-newProject/venus/">venus</a>
-
-            <!--  -->
-        </li>
-        
-    
-    </ul>
-
-    
-</nav>
+    </nav>
+    <script>
+            $('.dropdown').click(function() {
+                if($('.dropdown-content').css('display') == 'none'){
+                    $('.dropdown-content').show('slow');
+                }else{
+                    $('.dropdown-content').hide('slow');
+                }
+                
+            });
+        </script>
             </div>
         </header>
         <main class="site-content">
             <div class="site-wrapper">
-                <!-- <input type="checkbox" name="card_id_1_more" id="card_id_1_more" >
+                <input type="checkbox" name="card_id_1_more" id="card_id_1_more" >
 <section class="card">
 
     <a href="#p24">asdasd</a>
@@ -125,7 +168,9 @@
 
     </label>
         
-</section> -->
+</section>
+
+                
             </div>
         </main>
 <!-- <footer class="site-footer">

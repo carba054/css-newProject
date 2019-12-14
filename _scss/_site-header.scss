@@ -1,10 +1,13 @@
 .site-header {
 	position: relative;
 	z-index: 2000;
-	background-color: slategrey;
+	background-color: #0F0C02;
 	.site-wrapper {
 		padding-top: 2rem;
 		padding-bottom: 2rem;
+		p{
+			color: #FFF;
+		}
 
 		@include bp(desktop) {
 			display: flex;
@@ -15,6 +18,11 @@
 }
 
 .site-title {
+	a{
+		color: #FFF;
+		text-decoration: none;
+	}
+	
 	padding: 0;
 	font-weight: 500;
 }
