@@ -20,19 +20,22 @@
     width: 30%;
 }
 
+body{
+    background-image: url('https://cdn.pixabay.com/photo/2016/06/05/07/59/stars-1436950_960_720.jpg');
+}
 
   img.item-img {
   
     &.move-to-cart{
       position:absolute;
-      height:200px;
-      width:200px;
+      height:5px;
+      width:5px;
       z-index:9999;
   
       &.animate{
         opacity:1;
-        height:75px;
-        width:75px;
+        height:100%;
+        width:100%;
         transition:all 1.5s ease-in-out;
       }
     //   &.hide-img{

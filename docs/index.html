@@ -345,54 +345,48 @@
 
 <script>
     
-//     var transitionEnd = 'transitionend webkitTransitionEnd oTransitionEnd otransitionend';
-// var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+    var transitionEnd = 'transitionend webkitTransitionEnd oTransitionEnd otransitionend';
+var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
 
 // $('.shopping-cart').on(animationEnd, function(event){
 //   $(this).removeClass('animated rubberBand');
 // });
 
-// window.addEventListener('load', (event) => {
-//     alert('da');
-//   var cart = $('.shopping-cart');
-//   //var imgtodrag = $("img");
-//   $("img").each(function() {  
-//     //alert($( this ).position().left);
+window.addEventListener('load', (event) => {
+    alert('da');
+  var cart = $('.shopping-cart');
+  //var imgtodrag = $("img");
+  $("img").each(function() {  
     
-//     var imgtodrag = $( this );
-//     let parrent = $(this).parent('div');
-//     let posTop = $( this ).position().top;
-//     let posLeft = $( this ).position().left;
+    var imgtodrag = $( this );
+   
+    let top = Math.floor(Math.random() * 1000)-500;
+    let left = Math.floor(Math.random() * 1000)-500;
+    
+    
+    imgtodrag.css({'top':top,'left':left,'display':'block'}).addClass("move-to-cart");
+    setTimeout(function () {    
+        imgtodrag.addClass("animate");
+        
+        imgtodrag.css({"top":'50%'});
+        imgtodrag.css({"left":'50%'});
+        imgtodrag.parent('div').css({'position':'relative'});
+        // imgtodrag.one(transitionEnd, function(event){
+        //     imgtodrag.off(transitionEnd);
 
-//     imgtodrag.css({
-//       top: '0px',
-//       left: '0px'
-//     }).appendTo('body');
-  
-//     imgtodrag.css({
-//       top: '0px',
-//       left: '0px'
-//     })
-//     .appendTo(parrent).addClass("move-to-cart");
-//     setTimeout(function () {    
-//         imgtodrag.addClass("animate");
-//         imgtodrag.css({"top":posTop});
-//         imgtodrag.css({"left":posLeft});
-//         imgtodrag.one(transitionEnd, function(event){
-//             imgtodrag.off(transitionEnd);
-//         //$(this).addClass("hide-img");
-//         setTimeout(function () {
-//             imgtodrag.one(transitionEnd, function(event){
-//                 imgtodrag.off(transitionEnd);
-//             $(this).detach();
-//             parrent.addClass('animated rubberBand');
+        //$(this).addClass("hide-img");
+        // setTimeout(function () {
+        //     imgtodrag.one(transitionEnd, function(event){
+        //         imgtodrag.off(transitionEnd);
+        //     $(this).detach();
+        //     parrent.addClass('animated rubberBand');
 
-//           });
-//         }, 1);
-//       });
-//     }, 1);
-//     }); 
-// });
+        //   });
+        // }, 1);
+      //});
+    }, 1);
+    }); 
+});
 
 
 
