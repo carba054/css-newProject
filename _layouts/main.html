@@ -38,16 +38,18 @@
                 <!-- <div class="test">
                     <span>dummy span</span>
                 </div> -->
-                    <div class="page-video">
+                    <!-- <div class="page-video">
                             <video  data-mute="true" loop muted autoplay>
                                     <source src="https://solarsystem.nasa.gov/system/feature_items/webm_videos/515_MED_saturn_time_lapse_0001.webm
                                     " type="video/webm">
                                         
                             </video>
-                         </div>
-                {{ content }}
-
-                
+                     </div> -->
+                <!-- {{ content }} -->
+                {% if page.html %}
+                    {% include {{page.html}} %}
+                {% endif %}
+                       
             </div>
         </main>
         {% include footer.html %}

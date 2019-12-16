@@ -1,5 +1,5 @@
 .entry {
-	//background: #F8F8F8;
+	
 	position: relative;
 	z-index: 30;
 	top: -3em;
@@ -35,12 +35,28 @@
 // }
 
 .entry-media {
-	//  position: relative;
-	//  visibility:hidden;
-	// overflow: hidden;
 	width: 480px;
 	height: 480px;
-	
+	a{
+		display: block;
+	}
+	.item-img {
+  
+		&.item-img-start{
+		  position:absolute;
+		  height:5px;
+		  width:5px;
+		  z-index:9999;
+	  
+		  &.item-img-end{
+			opacity:1;
+			height:100%;
+			width:100%;
+			transition:all 1.5s ease-in-out;
+		  }
+		}
+	  }
+	  
 	@include bp(desktop) {
 		flex: 0 0 50%;
 	}
@@ -48,7 +64,7 @@
 
 .entry-media:before {
 	display: block;
-	content: '';
+	
 	padding-top: 80%;
 }
 
@@ -58,10 +74,10 @@
 	height: 100%;
 	object-fit: contain;
 	position: absolute;
-	//top: 50%; left: 50%;
 	transform-origin: center;
 	transform: translate(-50%, -50%);
 	transition: transform 0.3s ease-in-out;
+	animation: infinite;
 }
 
 .entry-media:hover img {

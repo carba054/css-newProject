@@ -1,0 +1,61 @@
+     
+
+{% assign navigation_pages = site.pages | sort:"order" %}
+                
+{% for current_page in navigation_pages %}
+    {% if current_page.group != planet %}
+    
+        <article class="entry">
+            
+                <div class="entry-media">
+                        <a href="{{ site.baseurl }}{{ current_page.url }}"> <img class="item-img" src="{{ current_page.image }}" alt="" /></a>
+                </div>`
+                
+                <div class="entry-content">
+                    <h3 class="entry-title">
+                        <a href="{{ site.baseurl }}{{ current_page.url }}">Sun</a>
+                    </h3>
+                    <p class="entry-meta">
+                        <a href="{{ site.baseurl }}{{ current_page.url }}">Brand design</a>
+                    </p>
+            
+                    <p>This page is a demo that shows everything you can do inside portfolio and blog posts.</p>
+                </div>
+            
+            
+        </article>
+       
+    
+    {% endif %}  
+{% endfor %}
+
+
+
+    
+<script>
+    
+    
+
+window.addEventListener('load', (event) => {
+    
+  $("img").each(function() {  
+    
+    let imgtodrag = $( this );
+   
+    let top = Math.floor(Math.random() * 1000)-500;
+    let left = Math.floor(Math.random() * 1000)-500;
+    
+    
+    imgtodrag.css({'top':top,'left':left,'display':'block'}).addClass("item-img-start");
+    setTimeout(function () {    
+        imgtodrag.addClass("item-img-end");
+        
+        imgtodrag.css({"top":'50%'});
+        imgtodrag.css({"left":'50%'});
+        imgtodrag.parent('a').parent('div').css({'position':'relative'});
+        
+    }, 1);
+    }); 
+});
+
+</script> 
