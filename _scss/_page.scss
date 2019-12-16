@@ -14,6 +14,47 @@
     opacity: 0.001;
 
 }
-// .page-video{
-//     position: absolute;
-// }
+.page-video{
+    display: none;
+    position: absolute;
+    width: 30%;
+}
+
+
+  img.item-img {
+  
+    &.move-to-cart{
+      position:absolute;
+      height:200px;
+      width:200px;
+      z-index:9999;
+  
+      &.animate{
+        opacity:1;
+        height:75px;
+        width:75px;
+        transition:all 1.5s ease-in-out;
+      }
+    //   &.hide-img{
+    //     opacity:0.5;
+    //     width:0;
+    //     height:0;
+    //     margin-left:75px;
+    //     transition:all .5s ease-in-out;
+    //   }
+    }
+  }
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
