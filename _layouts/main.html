@@ -13,7 +13,9 @@
         </script>
 </head>
 <body class="page-{{ page.title | slugify }}">
-        
+        <!-- <div class="test">
+                <span>dummy span</span>
+            </div> -->
         <!--  -->
         
         <!-- <iframe style='position: absolute; margin-left:10%' width="80%" height="100%" frameborder="0" src="https://www.youtube.com/embed/h-k3Ln-yLiU?autoplay=1&controls=0&loop=1&playlist=cTYuscQu-Og" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -35,9 +37,7 @@
         </header>
         <main class="site-content">
             <div class="site-wrapper">
-                <!-- <div class="test">
-                    <span>dummy span</span>
-                </div> -->
+                
                     <!-- <div class="page-video">
                             <video  data-mute="true" loop muted autoplay>
                                     <source src="https://solarsystem.nasa.gov/system/feature_items/webm_videos/515_MED_saturn_time_lapse_0001.webm
@@ -46,8 +46,10 @@
                             </video>
                      </div> -->
                 <!-- {{ content }} -->
-                {% if page.html %}
-                    {% include {{page.html}} %}
+                {% if page.index %}
+                    {% include {{page.index}} %}
+                {% else %}
+                    {% include grid.html %}
                 {% endif %}
                        
             </div>

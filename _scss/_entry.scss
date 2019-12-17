@@ -89,6 +89,7 @@
 .entry-content {
 	background: #FFF;
 	position: relative;
+	//opacity: 0.1;
 	z-index: 20;
 	box-shadow: 0 0 1.5em 0 rgba(0,0,0,0.07);
 	padding: 2em;
@@ -97,7 +98,13 @@
 		flex-grow: 1;
 		margin: 2em 2em 2em -2em;
 	}
+	
+	
 }
+
+
+
+
 
 .entry-title {
 	padding-bottom: 0.5rem;
