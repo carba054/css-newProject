@@ -16,7 +16,7 @@
                         <a href="{{ site.baseurl }}{{ current_page.url }}">{{ current_page.title}}</a>
                     </h3>
                     <p class="entry-meta">
-                        <a href="{{ site.baseurl }}{{ current_page.url }}">{{ current_page.fancy_desc }}</a>
+                            <b><i>{{ current_page.fancy_desc }}</i></b>
                     </p>
             
                     <!-- <div class="fade"></div>
@@ -73,4 +73,22 @@ window.addEventListener('load', (event) => {
     }); 
 });
 
+
+
+                
+let el = document.querySelectorAll('.entry-content');
+
+for(let i=0; i< el.length; i++){
+    if(i%2 == 0){
+        el[i].classList.add('talkbubbleRight');
+    }else{
+        el[i].classList.add('talkbubbleLeft');
+    }
+    
+}
+
+                    
+                
+
+            
 </script> 

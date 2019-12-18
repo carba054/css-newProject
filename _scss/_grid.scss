@@ -20,7 +20,7 @@ $grid-columns: 12;
     &-sidebar {
         grid-column: span #{$grid-columns/3};
         grid-row: 2;
-        background: green;
+        //background: green;
     }
     .gallery {
         padding: 0;

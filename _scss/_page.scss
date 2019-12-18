@@ -5,30 +5,46 @@
     }
 }
 
-.test{
-    //background-image: url('https://cdn.pixabay.com/photo/2016/06/05/07/59/stars-1436950_960_720.jpg');
-    position: absolute;
-    width: 50%;
-    bottom: 0px;
-    //height: fit-content ;
-    //display: flex;
-    //justify-content: space-between;
-    //background-color: white;
-    z-index: -10;
-   // opacity: 0.001;
+// .test{
+//     //background-image: url('https://cdn.pixabay.com/photo/2016/06/05/07/59/stars-1436950_960_720.jpg');
+//     // opacity: 0.001;
+//      //height: fit-content ;
+//     //display: flex;
+//     //justify-content: space-between;
+//     //background-color: white;
 
-}
-// .page-video video{
-//     //display: none;
-//     //position: absolute;
-//     //width: 100%;
+
+//     position: absolute;
+//     width: 50%;
+//     bottom: 0px;
+   
+//     z-index: -10;
+   
+
 // }
+.page-video video{
+    //display: none;
+    //position: absolute;
+    width: 200%;
+}
 
 body{
     background-image: url('https://cdn.pixabay.com/photo/2016/06/05/07/59/stars-1436950_960_720.jpg');
     
 }
-
+.site-branding{
+    text-align:center;
+    display:table;
+    .site-title{
+        display:table-cell;
+         vertical-align:middle
+        
+    }
+    .test1{
+          width: 80px;
+          height: auto;
+      }
+}
 
   
   
