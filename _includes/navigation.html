@@ -1,27 +1,22 @@
 <label for="site-nav-toggle" class="site-nav-toggle-label">Menu</label>
-    <nav class="site-nav location-{{ include.location }} ">
-        <a class="{% if page.url != '/' %}current-page{% else %}dummy{% endif %}" href="{{ site.baseurl }}/">Home</a>
-        <div class="dropdown">
-            <a class="{% if page.url == '/' %}current-page{% else %}dummy{% endif %}" href="/" onclick="return false;">Planets</a></li>
-            <div class="dropdown-content ">
-                <ul>
-                {% assign navigation_pages = site.pages | sort:"order" %}
-                
-                {% for current_page in navigation_pages %}
-                    {% if current_page.group != planet %}
-                    
-                        <li class="page-title-{{ current_page.title | slugify }}{% if current_page.url == page.url %} current-page{% endif %}">
-                            <a href="{{ site.baseurl }}{{ current_page.url }}">{{ current_page.title }}</a>
-                        </li>
-                    
-                    {% endif %}  
-                {% endfor %}
-                </ul>
-            </div>
+<nav class="site-nav location-{{ include.location }} ">
+    <a class="{% if page.url != '/' %}current-page{% else %}dummy{% endif %}" href="{{ site.baseurl }}/">Home</a>
+    <div class="dropdown">
+        <a class="{% if page.url == '/' or page.url == '/galery/' %}current-page{% else %}dummy{% endif %} " href="/" onclick="return false;">Planets</a>
+        <div class="dropdown-content ">
+            <ul>
+                {% assign navigation_pages = site.pages | sort:"order" %} {% for current_page in navigation_pages %} {% if current_page.group != planet %}
+
+                <li class="page-title-{{ current_page.title | slugify }}{% if current_page.url == page.url %} current-page{% endif %}">
+                    <a href="{{ site.baseurl }}{{ current_page.url }}">{{ current_page.title }}</a>
+                </li>
+
+                {% endif %} {% endfor %}
+            </ul>
         </div>
-        <a class="{% if page.url != 'galery' %}current-page{% else %}dummy{% endif %}" href="galery/">Gallery</a>
-    
-    </nav>
+    </div>
+    <a class="{% if page.url != '/galery/' or page.url == '/'  %}current-page{% else %}dummy{% endif %}" href="{{ site.baseurl }}/galery/">Gallery</a>
+</nav>
 <script>
     
 

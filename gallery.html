@@ -1,0 +1,70 @@
+---
+layout: main
+title: Galery
+permalink: /galery/
+order: 60
+
+---
+
+
+
+<ul class="gallery">
+    <li class="portrait">
+        
+        <img src="https://wallpapersite.com/images/pages/pic_w/8953.jpg">
+        
+    </li>
+    <li class="portrait">
+        
+        <img src="https://onlinepngtools.com/images/examples-onlinepngtools/cosmos.png">
+        
+    </li>
+    <li class="landscape">
+        
+        <img src="http://vistanews.ru/uploads/posts/2016-12/1482398203_galaktiki.jpg">
+        
+    </li>
+    <li class="portrait">
+        
+        <img src="https://megavselena.bg/wp-content/uploads/2013/07/collision-of-galaxies.jpg">
+        
+    </li>
+    <li class="landscape">
+        
+        <img src="https://blenderartists.org/uploads/default/original/4X/f/a/a/faac1963e569a765d50640047caec4beabe6ebf1.jpg">
+        
+    </li>
+        
+    <li class="portrait">
+        
+        <img src="https://pbs.twimg.com/media/DaBa5q2W0AA9Jdi.jpg">
+        
+    </li>
+</ul>
+<div id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="img01">
+    <div id="caption"></div>
+</div>
+
+
+<script>    
+    
+let modal = document.getElementById("myModal");
+let modalImg = document.getElementById("img01");
+let captionText = document.getElementById("caption");
+
+$( "img" ).click(function() {
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+
+});
+let span = document.getElementsByClassName("close")[0];
+
+        span.onclick = function() { 
+        modal.style.display = "none";
+}
+
+    
+</script>

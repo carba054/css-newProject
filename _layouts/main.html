@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,29 +8,21 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="{{ site.baseurl }}/css/site.css">
     <script>
-            window.addEventListener('load', (event) => {
-                document.querySelector('body').classList.add('loaded');
-            });
-        </script>
+        window.addEventListener('load', (event) => {
+            document.querySelector('body').classList.add('loaded');
+        });
+    </script>
 </head>
+
 <body class="page-{{ page.title | slugify }}">
-    
-        <!-- <div class="test">
-                <span>dummy span</span>
-            </div> -->
-        <!--  -->
-        
-        <!-- <iframe style='position: absolute; margin-left:10%' width="80%" height="100%" frameborder="0" src="https://www.youtube.com/embed/h-k3Ln-yLiU?autoplay=1&controls=0&loop=1&playlist=cTYuscQu-Og" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-         -->
-         
-        
-        <input type="checkbox" id="site-nav-toggle" class="site-nav-toggle">
+
+    <input type="checkbox" id="site-nav-toggle" class="site-nav-toggle">
     <div class="site">
-        
+
         <header class="site-header">
             <div class="site-wrapper">
                 <div class="site-branding">
-                    <img class='test1'src="https://3.bp.blogspot.com/-q1eVC23lYgg/Wy92gTVOPRI/AAAAAAABnJY/kKeeK36klAI7h6M-qejxp5KEaXtjelcZgCLcBGAs/s1600/giphy.gif" alt="">
+                    <img class='test1' src="https://3.bp.blogspot.com/-q1eVC23lYgg/Wy92gTVOPRI/AAAAAAABnJY/kKeeK36klAI7h6M-qejxp5KEaXtjelcZgCLcBGAs/s1600/giphy.gif" alt="">
                     <h1 class="site-title"><a href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
                 </div>
 
@@ -37,18 +30,19 @@
             </div>
         </header>
         <main class="site-content">
-            
-                {% if page.index %}
-                <div class="site-wrapper">
-                    {% include {{page.index}} %}
-                </div>
-                {% else %}
-                <div class="site-grid">
-                    {{ content }} 
-                </div>
-                {% endif %}
+
+            {% if page.index %}
+            <div class="site-wrapper">
+                {% include {{page.index}} %}
+            </div>
+            {% else %}
+            <div class="site-grid">
+                {{ content }}
+            </div>
+            {% endif %}
         </main>
         {% include footer.html %}
     </div>
 </body>
+
 </html>

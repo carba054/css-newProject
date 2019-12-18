@@ -6,21 +6,20 @@
     {% if current_page.group != planet %}
     
         <article class="entry">
-            
-                <div class="entry-media">
-                        <a href="{{ site.baseurl }}{{ current_page.url }}"> <img class="item-img" src="{{ current_page.image }}" alt="" /></a>
-                </div>`
-                
-                <div class="entry-content">
-                    <h3 class="entry-title">
-                        <a href="{{ site.baseurl }}{{ current_page.url }}">{{ current_page.title}}</a>
-                    </h3>
-                    <p class="entry-meta">
-                            <b><i>{{ current_page.fancy_desc }}</i></b>
-                    </p>
-                </div>
-            
-            
+
+            <div class="entry-media">
+                <a href="{{ site.baseurl }}{{ current_page.url }}"> <img class="item-img" src="{{ current_page.image }}" alt="" /></a>
+            </div>`
+        
+            <div class="entry-content">
+                <h3 class="entry-title">
+                                <a href="{{ site.baseurl }}{{ current_page.url }}">{{ current_page.title}}</a>
+                            </h3>
+                <p class="entry-meta">
+                    <b><i>{{ current_page.fancy_desc }}</i></b>
+                </p>
+            </div>
+        
         </article>
        
     
@@ -55,10 +54,7 @@ window.addEventListener('load', (event) => {
     }, 1);
     }); 
 });
-
-
-
-                
+      
 let el = document.querySelectorAll('.entry-content');
 
 for(let i=0; i< el.length; i++){
@@ -69,9 +65,6 @@ for(let i=0; i< el.length; i++){
     }
     
 }
-
-                    
-                
 
             
 </script> 
