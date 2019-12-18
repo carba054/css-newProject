@@ -31,30 +31,22 @@
                 <div class="site-branding">
                     <img class='test1'src="https://3.bp.blogspot.com/-q1eVC23lYgg/Wy92gTVOPRI/AAAAAAABnJY/kKeeK36klAI7h6M-qejxp5KEaXtjelcZgCLcBGAs/s1600/giphy.gif" alt="">
                     <h1 class="site-title"><a href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
-                    <!-- <p>{{ site.description }}</p> -->
                 </div>
 
                 {% include navigation.html %}
             </div>
         </header>
         <main class="site-content">
-            <div class="site-wrapper">
-                
-                    <!-- <div class="page-video">
-                            <video  data-mute="true" loop muted autoplay>
-                                    <source src="https://solarsystem.nasa.gov/system/feature_items/webm_videos/515_MED_saturn_time_lapse_0001.webm
-                                    " type="video/webm">
-                                        
-                            </video>
-                     </div> -->
-                <!-- {{ content }} -->
+            
                 {% if page.index %}
+                <div class="site-wrapper">
                     {% include {{page.index}} %}
+                </div>
                 {% else %}
-                    {% include grid.html %}
+                <div class="site-grid">
+                    {{ content }} 
+                </div>
                 {% endif %}
-                       
-            </div>
         </main>
         {% include footer.html %}
     </div>

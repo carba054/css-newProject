@@ -31,14 +31,13 @@
                 <div class="site-branding">
                     <img class='test1'src="https://3.bp.blogspot.com/-q1eVC23lYgg/Wy92gTVOPRI/AAAAAAABnJY/kKeeK36klAI7h6M-qejxp5KEaXtjelcZgCLcBGAs/s1600/giphy.gif" alt="">
                     <h1 class="site-title"><a href="/css-newProject/">Solar System</a></h1>
-                    <!-- <p>HI</p> -->
                 </div>
 
                 <label for="site-nav-toggle" class="site-nav-toggle-label">Menu</label>
     <nav class="site-nav location- ">
-        <a href="/css-newProject/">Home</a>
+        <a class="current-page" href="/css-newProject/">Home</a>
         <div class="dropdown">
-            <a href="/" onclick="return false;">Planets</a></li>
+            <a class="dummy" href="/" onclick="return false;">Planets</a></li>
             <div class="dropdown-content ">
                 <ul>
                 
@@ -130,145 +129,117 @@
                     
                       
                 
-            </ul>
+                </ul>
             </div>
         </div>
-        
+        <a class="current-page" href="galery/">Gallery</a>
     
     </nav>
-    <script>
+<script>
+    
+
+
+    $(document).ready(function () {
+    $(window).on("resize", function (e) {
+        checkScreenSize();
+    });
+
+    checkScreenSize();
+
+    function checkScreenSize(){
+        var newWindowWidth = $(window).width();
+        if (newWindowWidth < 600) {
             $('.dropdown').click(function() {
-                if($('.dropdown-content').css('display') == 'none'){
-                    $('.dropdown-content').show('slow');
-                }else{
-                    $('.dropdown-content').hide('slow');
-                }
-                
+            if ( $('.dropdown-content').css('display') == 'none'){
+                $('.dropdown-content').show('slow'); 
+            }else{
+                $('.dropdown-content').hide('slow');
+            }
+              });
+        }
+        else
+        {
+            $('.dropdown').hover(function() {
+        
+            $('.dropdown-content').show('slow'); 
+            
+            }, function(){
+                $('.dropdown-content').hide('slow');
             });
-        </script>
+        }
+    }
+    });
+</script>
             </div>
         </header>
         <main class="site-content">
-            <div class="site-wrapper">
+            
                 
-                    <!-- <div class="page-video">
-                            <video  data-mute="true" loop muted autoplay>
-                                    <source src="https://solarsystem.nasa.gov/system/feature_items/webm_videos/515_MED_saturn_time_lapse_0001.webm
-                                    " type="video/webm">
-                                        
-                            </video>
-                     </div> -->
-                <!-- <section class="card">
-
-        <h3>Introduction</h3>
-    
-        <p>
-                The Sun is a yellow dwarf star, a hot ball of glowing gases at the heart of our solar system. Its gravity holds the solar system together, keeping everything – from the biggest planets to the smallest particles of debris – in its orbit. The connection and interactions between the Sun and Earth drive the seasons, ocean currents, weather, climate, radiation belts and auroras. Though it is special to us, there are billions of stars like our Sun scattered across the Milky Way galaxy.
-
-The Sun has many names in many cultures. The Latin word for Sun is “sol,” which is the main adjective for all things Sun-related: solar.
-</p>
-        <h3>Size and Distance</h3>
-        
-        <p>
-                With a radius of 432,168.6 miles (695,508 kilometers), our Sun is not an especially large star—many are several times bigger—but it is still far more massive than our home planet: 332,946 Earths match the mass of the Sun. The Sun’s volume would need 1.3 million Earths to fill it.
-            
-                The Sun is 93 million miles (150 million kilometers) from Earth. Its nearest stellar neighbor is the Alpha Centauri triple star system: Proxima Centauri is 4.24 light years away, and Alpha Centauri A and B—two stars orbiting each other—are 4.37 light years away. A light year is the distance light travels in one year, which is equal to 5,878,499,810,000 miles or 9,460,528,400,000 kilometers.
-            
-            </p>
-    
-            
-</section> -->
+                <div class="site-grid">
+                    <div class="wrapper aligned">
+        <div class="box item1"><h1>Sun</h1><h2>Introduction</h2>
+                <p>
+                        The Sun is a yellow dwarf star, a hot ball of glowing gases at the heart of our solar system. Its gravity holds the solar system together, keeping everything – from the biggest planets to the smallest particles of debris – in its orbit. The connection and interactions between the Sun and Earth drive the seasons, ocean currents, weather, climate, radiation belts and auroras. Though it is special to us, there are billions of stars like our Sun scattered across the Milky Way galaxy.
                 
-                    
-
-   
-    <div class="grid">
-        <div class="grid-main">
-            
-            <h1>Sun</h1>
-            
-            <section class="card">
-
-        <h3>Introduction</h3>
-    
-        <p>
-                The Sun is a yellow dwarf star, a hot ball of glowing gases at the heart of our solar system. Its gravity holds the solar system together, keeping everything – from the biggest planets to the smallest particles of debris – in its orbit. The connection and interactions between the Sun and Earth drive the seasons, ocean currents, weather, climate, radiation belts and auroras. Though it is special to us, there are billions of stars like our Sun scattered across the Milky Way galaxy.
-
-The Sun has many names in many cultures. The Latin word for Sun is “sol,” which is the main adjective for all things Sun-related: solar.
-</p>
-        <h3>Size and Distance</h3>
-        
-        <p>
-                With a radius of 432,168.6 miles (695,508 kilometers), our Sun is not an especially large star—many are several times bigger—but it is still far more massive than our home planet: 332,946 Earths match the mass of the Sun. The Sun’s volume would need 1.3 million Earths to fill it.
-            
-                The Sun is 93 million miles (150 million kilometers) from Earth. Its nearest stellar neighbor is the Alpha Centauri triple star system: Proxima Centauri is 4.24 light years away, and Alpha Centauri A and B—two stars orbiting each other—are 4.37 light years away. A light year is the distance light travels in one year, which is equal to 5,878,499,810,000 miles or 9,460,528,400,000 kilometers.
-            
-            </p>
-    
-            
-</section>
-
+                The Sun has many names in many cultures. The Latin word for Sun is “sol,” which is the main adjective for all things Sun-related: solar.
+                </p>
         </div>
-
-        <div class="grid-sidebar">
-            <div class="page-video">
-
-                <!-- <div class="fade"></div>
-
-                <div class="star-wars">
-                    <div class="crawl">
-                    <div class="title">
-                        <p>Episode IV</p>
-                        <h1>A New Hope</h1>
-                    </div>
-                    
-                    <p>It is a period of civil war. Rebel spaceships, striking from a hidden base, have won their first victory against the evil Galactic Empire.</p>
-                        
-                        <p>During the battle, Rebel spies managed to steal secret plans to the Empire’s ultimate weapon, the DEATH STAR, an armored space station with enough power to destroy an entire planet.</p>
-                
-                    <p>Pursued by the Empire’s sinister agents, Princess Leia races home aboard her starship, custodian of the stolen plans that can save her people and restore freedom to the galaxy….</p>
-                    </div>
-                </div>         -->
-
-                    
-                
-                <video  data-mute="true" loop muted autoplay>
-                        <source src="https://solarsystem.nasa.gov/system/feature_items/webm_videos/515_MED_saturn_time_lapse_0001.webm
-                        " type="video/webm">
-                            
-                </video>
-            </div>
-        </div>
-    </div>
+        <div class="box item2">
+                <div class="page-video">
+                                <div id="test"></div>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/z8aBZZnv6y8?autoplay=1&mute=1&controls=0&loop=1&playlist=z8aBZZnv6y8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" ></iframe>
  
+                        <!-- <video  data-mute="true" loop muted autoplay>
+                                <source src="https://solarsystem.nasa.gov/system/feature_items/webm_videos/515_MED_saturn_time_lapse_0001.webm
+                                " type="video/webm">
+                                        
+                        </video> -->
+                </div>
                 
-                       
-            </div>
+                <img class="box-img" src="https://www.stickpng.com/assets/images/580b585b2edbce24c47b270f.png" alt="" />
+
+               
+                
+        </div>
+        <div class="box item3">
+                <h2>Size and Distance</h2>
+                <p>
+                        With a radius of 432,168.6 miles (695,508 kilometers), our Sun is not an especially large star—many are several times bigger—but it is still far more massive than our home planet: 332,946 Earths match the mass of the Sun. The Sun’s volume would need 1.3 million Earths to fill it.
+                </p>
+                <p>
+                        The Sun is 93 million miles (150 million kilometers) from Earth. Its nearest stellar neighbor is the Alpha Centauri triple star system: Proxima Centauri is 4.24 light years away, and Alpha Centauri A and B—two stars orbiting each other—are 4.37 light years away. A light year is the distance light travels in one year, which is equal to 5,878,499,810,000 miles or 9,460,528,400,000 kilometers
+                </p>
+        </div>
+        <div class="box item4">
+                <h2>Orbit and Rotation</h2>
+                <p>
+                        The Sun, and everything that orbits it, is located in the Milky Way galaxy. More specifically, our Sun is in a spiral arm called the Orion Spur that extends outward from the Sagittarius arm. From there, the Sun orbits the center of the Milky Way Galaxy, bringing the planets, asteroids, comets and other objects along with it. Our solar system is moving with an average velocity of 450,000 miles per hour (720,000 kilometers per hour). But even at this speed, it takes us about 230 million years to make one complete orbit around the Milky Way.
+                </p>
+                <p>
+                        The Sun rotates as it orbits the center of the Milky Way. Its spin has an axial tilt of 7.25 degrees with respect to the plane of the planets’ orbits. Since the Sun is not a solid body, different parts of the Sun rotate at different rates. At the equator, the Sun spins around once about every 25 days, but at its poles the Sun rotates once on its axis every 36 Earth days.
+                </p>
+        </div>
+        <div class="box item5">
+                <h2>Formation</h2>
+                <p>
+                        The Sun and the rest of the solar system formed from a giant, rotating cloud of gas and dust called a solar nebula about 4.5 billion years ago. As the nebula collapsed because of its overwhelming gravity, it spun faster and flattened into a disk. Most of the material was pulled toward the center to form our Sun, which accounts for 99.8% of the mass of the entire solar system.
+                </p>
+                <p>
+                        Like all stars, the Sun will someday run out of energy. When the Sun starts to die, it will swell so big that it will engulf Mercury and Venus and maybe even Earth. Scientists predict the Sun is a little less than halfway through its lifetime and will last another 6.5 billion years before it shrinks down to be a white dwarf.
+                </p>
+        </div>
+</div>
+ 
+                </div>
+                
         </main>
         <footer class="site-footer">
         <div class="site-wrapper">
-    
             <div class="info">
                 <p>Solar System</p>
                 <p>A sleek, modern Jekyll theme for personal websites.</p>
                 <p>&copy; 2019 Personal Jekyll Themes</p> 
             </div>
-    
-            <ul class="social">
-                <li>
-                    <a href="#">F</a>
-                </li>
-                <li>
-                    <a href="#">T</a>
-                </li>
-                <li>
-                    <a href="#">L</a>
-                </li>
-                <li>
-                    <a href="#">I</a>
-                </li>
-            </ul>
-    
         </div>
     </footer>
     </div>

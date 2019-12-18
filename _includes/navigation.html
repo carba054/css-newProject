@@ -1,8 +1,8 @@
 <label for="site-nav-toggle" class="site-nav-toggle-label">Menu</label>
     <nav class="site-nav location-{{ include.location }} ">
-        <a href="{{ site.baseurl }}/">Home</a>
+        <a class="{% if page.url != '/' %}current-page{% else %}dummy{% endif %}" href="{{ site.baseurl }}/">Home</a>
         <div class="dropdown">
-            <a href="/" onclick="return false;">Planets</a></li>
+            <a class="{% if page.url == '/' %}current-page{% else %}dummy{% endif %}" href="/" onclick="return false;">Planets</a></li>
             <div class="dropdown-content ">
                 <ul>
                 {% assign navigation_pages = site.pages | sort:"order" %}
@@ -16,19 +16,44 @@
                     
                     {% endif %}  
                 {% endfor %}
-            </ul>
+                </ul>
             </div>
         </div>
-        
+        <a class="{% if page.url != 'galery' %}current-page{% else %}dummy{% endif %}" href="galery/">Gallery</a>
     
     </nav>
-    <script>
+<script>
+    
+
+
+    $(document).ready(function () {
+    $(window).on("resize", function (e) {
+        checkScreenSize();
+    });
+
+    checkScreenSize();
+
+    function checkScreenSize(){
+        var newWindowWidth = $(window).width();
+        if (newWindowWidth < 600) {
             $('.dropdown').click(function() {
-                if($('.dropdown-content').css('display') == 'none'){
-                    $('.dropdown-content').show('slow');
-                }else{
-                    $('.dropdown-content').hide('slow');
-                }
-                
+            if ( $('.dropdown-content').css('display') == 'none'){
+                $('.dropdown-content').show('slow'); 
+            }else{
+                $('.dropdown-content').hide('slow');
+            }
+              });
+        }
+        else
+        {
+            $('.dropdown').hover(function() {
+        
+            $('.dropdown-content').show('slow'); 
+            
+            }, function(){
+                $('.dropdown-content').hide('slow');
             });
-        </script>
+        }
+    }
+    });
+</script>

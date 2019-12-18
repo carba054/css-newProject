@@ -31,14 +31,13 @@
                 <div class="site-branding">
                     <img class='test1'src="https://3.bp.blogspot.com/-q1eVC23lYgg/Wy92gTVOPRI/AAAAAAABnJY/kKeeK36klAI7h6M-qejxp5KEaXtjelcZgCLcBGAs/s1600/giphy.gif" alt="">
                     <h1 class="site-title"><a href="/css-newProject/">Solar System</a></h1>
-                    <!-- <p>HI</p> -->
                 </div>
 
                 <label for="site-nav-toggle" class="site-nav-toggle-label">Menu</label>
     <nav class="site-nav location- ">
-        <a href="/css-newProject/">Home</a>
+        <a class="dummy" href="/css-newProject/">Home</a>
         <div class="dropdown">
-            <a href="/" onclick="return false;">Planets</a></li>
+            <a class="current-page" href="/" onclick="return false;">Planets</a></li>
             <div class="dropdown-content ">
                 <ul>
                 
@@ -130,36 +129,53 @@
                     
                       
                 
-            </ul>
+                </ul>
             </div>
         </div>
-        
+        <a class="current-page" href="galery/">Gallery</a>
     
     </nav>
-    <script>
+<script>
+    
+
+
+    $(document).ready(function () {
+    $(window).on("resize", function (e) {
+        checkScreenSize();
+    });
+
+    checkScreenSize();
+
+    function checkScreenSize(){
+        var newWindowWidth = $(window).width();
+        if (newWindowWidth < 600) {
             $('.dropdown').click(function() {
-                if($('.dropdown-content').css('display') == 'none'){
-                    $('.dropdown-content').show('slow');
-                }else{
-                    $('.dropdown-content').hide('slow');
-                }
-                
+            if ( $('.dropdown-content').css('display') == 'none'){
+                $('.dropdown-content').show('slow'); 
+            }else{
+                $('.dropdown-content').hide('slow');
+            }
+              });
+        }
+        else
+        {
+            $('.dropdown').hover(function() {
+        
+            $('.dropdown-content').show('slow'); 
+            
+            }, function(){
+                $('.dropdown-content').hide('slow');
             });
-        </script>
+        }
+    }
+    });
+</script>
             </div>
         </header>
         <main class="site-content">
-            <div class="site-wrapper">
+            
                 
-                    <!-- <div class="page-video">
-                            <video  data-mute="true" loop muted autoplay>
-                                    <source src="https://solarsystem.nasa.gov/system/feature_items/webm_videos/515_MED_saturn_time_lapse_0001.webm
-                                    " type="video/webm">
-                                        
-                            </video>
-                     </div> -->
-                <!--  -->
-                
+                <div class="site-wrapper">
                          
 
 
@@ -186,23 +202,6 @@
                     <p class="entry-meta">
                             <b><i>The Sun—the heart of our solar system—is a yellow dwarf star, a hot ball of glowing gases.</i></b>
                     </p>
-            
-                    <!-- <div class="fade"></div>
-
-                    <section class="star-wars">
-                    <div class="crawl">
-                        <div class="title">
-                        <p>Episode IV</p>
-                        <h1>A New Hope</h1>
-                        </div>
-                        
-                        <p>It is a period of civil war. Rebel spaceships, striking from a hidden base, have won their first victory against the evil Galactic Empire.</p>
-                        
-                        <p>During the battle, Rebel spies managed to steal secret plans to the Empire’s ultimate weapon, the DEATH STAR, an armored space station with enough power to destroy an entire planet.</p>
-                    
-                        <p>Pursued by the Empire’s sinister agents, Princess Leia races home aboard her starship, custodian of the stolen plans that can save her people and restore freedom to the galaxy….</p>
-                    </div>
-                    </section>    -->
                 </div>
             
             
@@ -226,23 +225,6 @@
                     <p class="entry-meta">
                             <b><i>Mercury is the smallest and innermost planet in the Solar System. Its orbit around the Sun takes only 87.97 days, the shortest of all the planets in the Solar System. It is named after the Roman deity Mercury, the messenger of the gods.</i></b>
                     </p>
-            
-                    <!-- <div class="fade"></div>
-
-                    <section class="star-wars">
-                    <div class="crawl">
-                        <div class="title">
-                        <p>Episode IV</p>
-                        <h1>A New Hope</h1>
-                        </div>
-                        
-                        <p>It is a period of civil war. Rebel spaceships, striking from a hidden base, have won their first victory against the evil Galactic Empire.</p>
-                        
-                        <p>During the battle, Rebel spies managed to steal secret plans to the Empire’s ultimate weapon, the DEATH STAR, an armored space station with enough power to destroy an entire planet.</p>
-                    
-                        <p>Pursued by the Empire’s sinister agents, Princess Leia races home aboard her starship, custodian of the stolen plans that can save her people and restore freedom to the galaxy….</p>
-                    </div>
-                    </section>    -->
                 </div>
             
             
@@ -266,23 +248,6 @@
                     <p class="entry-meta">
                             <b><i>Venus is named for the ancient Roman goddess of love and beauty, who was known as Aphrodite to the Ancient Greeks.</i></b>
                     </p>
-            
-                    <!-- <div class="fade"></div>
-
-                    <section class="star-wars">
-                    <div class="crawl">
-                        <div class="title">
-                        <p>Episode IV</p>
-                        <h1>A New Hope</h1>
-                        </div>
-                        
-                        <p>It is a period of civil war. Rebel spaceships, striking from a hidden base, have won their first victory against the evil Galactic Empire.</p>
-                        
-                        <p>During the battle, Rebel spies managed to steal secret plans to the Empire’s ultimate weapon, the DEATH STAR, an armored space station with enough power to destroy an entire planet.</p>
-                    
-                        <p>Pursued by the Empire’s sinister agents, Princess Leia races home aboard her starship, custodian of the stolen plans that can save her people and restore freedom to the galaxy….</p>
-                    </div>
-                    </section>    -->
                 </div>
             
             
@@ -306,23 +271,6 @@
                     <p class="entry-meta">
                             <b><i>Our home planet is the third planet from the Sun, and the only place we know of so far that’s inhabited by living things.</i></b>
                     </p>
-            
-                    <!-- <div class="fade"></div>
-
-                    <section class="star-wars">
-                    <div class="crawl">
-                        <div class="title">
-                        <p>Episode IV</p>
-                        <h1>A New Hope</h1>
-                        </div>
-                        
-                        <p>It is a period of civil war. Rebel spaceships, striking from a hidden base, have won their first victory against the evil Galactic Empire.</p>
-                        
-                        <p>During the battle, Rebel spies managed to steal secret plans to the Empire’s ultimate weapon, the DEATH STAR, an armored space station with enough power to destroy an entire planet.</p>
-                    
-                        <p>Pursued by the Empire’s sinister agents, Princess Leia races home aboard her starship, custodian of the stolen plans that can save her people and restore freedom to the galaxy….</p>
-                    </div>
-                    </section>    -->
                 </div>
             
             
@@ -346,23 +294,6 @@
                     <p class="entry-meta">
                             <b><i>The fourth planet from the Sun, Mars is a dusty, cold, desert world with a very thin atmosphere.</i></b>
                     </p>
-            
-                    <!-- <div class="fade"></div>
-
-                    <section class="star-wars">
-                    <div class="crawl">
-                        <div class="title">
-                        <p>Episode IV</p>
-                        <h1>A New Hope</h1>
-                        </div>
-                        
-                        <p>It is a period of civil war. Rebel spaceships, striking from a hidden base, have won their first victory against the evil Galactic Empire.</p>
-                        
-                        <p>During the battle, Rebel spies managed to steal secret plans to the Empire’s ultimate weapon, the DEATH STAR, an armored space station with enough power to destroy an entire planet.</p>
-                    
-                        <p>Pursued by the Empire’s sinister agents, Princess Leia races home aboard her starship, custodian of the stolen plans that can save her people and restore freedom to the galaxy….</p>
-                    </div>
-                    </section>    -->
                 </div>
             
             
@@ -386,23 +317,6 @@
                     <p class="entry-meta">
                             <b><i>Fifth in line from the Sun, Jupiter is, by far, the largest planet in the solar system – more than twice as massive as all the other planets combined.</i></b>
                     </p>
-            
-                    <!-- <div class="fade"></div>
-
-                    <section class="star-wars">
-                    <div class="crawl">
-                        <div class="title">
-                        <p>Episode IV</p>
-                        <h1>A New Hope</h1>
-                        </div>
-                        
-                        <p>It is a period of civil war. Rebel spaceships, striking from a hidden base, have won their first victory against the evil Galactic Empire.</p>
-                        
-                        <p>During the battle, Rebel spies managed to steal secret plans to the Empire’s ultimate weapon, the DEATH STAR, an armored space station with enough power to destroy an entire planet.</p>
-                    
-                        <p>Pursued by the Empire’s sinister agents, Princess Leia races home aboard her starship, custodian of the stolen plans that can save her people and restore freedom to the galaxy….</p>
-                    </div>
-                    </section>    -->
                 </div>
             
             
@@ -426,23 +340,6 @@
                     <p class="entry-meta">
                             <b><i>Saturn is the sixth planet from the Sun and the second largest planet in our solar system.</i></b>
                     </p>
-            
-                    <!-- <div class="fade"></div>
-
-                    <section class="star-wars">
-                    <div class="crawl">
-                        <div class="title">
-                        <p>Episode IV</p>
-                        <h1>A New Hope</h1>
-                        </div>
-                        
-                        <p>It is a period of civil war. Rebel spaceships, striking from a hidden base, have won their first victory against the evil Galactic Empire.</p>
-                        
-                        <p>During the battle, Rebel spies managed to steal secret plans to the Empire’s ultimate weapon, the DEATH STAR, an armored space station with enough power to destroy an entire planet.</p>
-                    
-                        <p>Pursued by the Empire’s sinister agents, Princess Leia races home aboard her starship, custodian of the stolen plans that can save her people and restore freedom to the galaxy….</p>
-                    </div>
-                    </section>    -->
                 </div>
             
             
@@ -466,23 +363,6 @@
                     <p class="entry-meta">
                             <b><i>The first planet found with the aid of a telescope, Uranus was discovered in 1781 by astronomer William Herschel, although he originally thought it was either a comet or a star. It was two years later that the object was universally accepted as a new planet, in part because of observations by astronomer Johann Elert Bode.</i></b>
                     </p>
-            
-                    <!-- <div class="fade"></div>
-
-                    <section class="star-wars">
-                    <div class="crawl">
-                        <div class="title">
-                        <p>Episode IV</p>
-                        <h1>A New Hope</h1>
-                        </div>
-                        
-                        <p>It is a period of civil war. Rebel spaceships, striking from a hidden base, have won their first victory against the evil Galactic Empire.</p>
-                        
-                        <p>During the battle, Rebel spies managed to steal secret plans to the Empire’s ultimate weapon, the DEATH STAR, an armored space station with enough power to destroy an entire planet.</p>
-                    
-                        <p>Pursued by the Empire’s sinister agents, Princess Leia races home aboard her starship, custodian of the stolen plans that can save her people and restore freedom to the galaxy….</p>
-                    </div>
-                    </section>    -->
                 </div>
             
             
@@ -506,23 +386,6 @@
                     <p class="entry-meta">
                             <b><i>Dark, cold and whipped by supersonic winds, ice giant Neptune is the eighth and most distant planet in our solar system.</i></b>
                     </p>
-            
-                    <!-- <div class="fade"></div>
-
-                    <section class="star-wars">
-                    <div class="crawl">
-                        <div class="title">
-                        <p>Episode IV</p>
-                        <h1>A New Hope</h1>
-                        </div>
-                        
-                        <p>It is a period of civil war. Rebel spaceships, striking from a hidden base, have won their first victory against the evil Galactic Empire.</p>
-                        
-                        <p>During the battle, Rebel spies managed to steal secret plans to the Empire’s ultimate weapon, the DEATH STAR, an armored space station with enough power to destroy an entire planet.</p>
-                    
-                        <p>Pursued by the Empire’s sinister agents, Princess Leia races home aboard her starship, custodian of the stolen plans that can save her people and restore freedom to the galaxy….</p>
-                    </div>
-                    </section>    -->
                 </div>
             
             
@@ -546,23 +409,6 @@
                     <p class="entry-meta">
                             <b><i>Pluto—which is smaller than Earth’s Moon—has a heart-shaped glacier that’s the size of Texas and Oklahoma. This fascinating world has blue skies, spinning moons, mountains as high as the Rockies, and it snows—but the snow is red.</i></b>
                     </p>
-            
-                    <!-- <div class="fade"></div>
-
-                    <section class="star-wars">
-                    <div class="crawl">
-                        <div class="title">
-                        <p>Episode IV</p>
-                        <h1>A New Hope</h1>
-                        </div>
-                        
-                        <p>It is a period of civil war. Rebel spaceships, striking from a hidden base, have won their first victory against the evil Galactic Empire.</p>
-                        
-                        <p>During the battle, Rebel spies managed to steal secret plans to the Empire’s ultimate weapon, the DEATH STAR, an armored space station with enough power to destroy an entire planet.</p>
-                    
-                        <p>Pursued by the Empire’s sinister agents, Princess Leia races home aboard her starship, custodian of the stolen plans that can save her people and restore freedom to the galaxy….</p>
-                    </div>
-                    </section>    -->
                 </div>
             
             
@@ -620,34 +466,16 @@ for(let i=0; i< el.length; i++){
 
             
 </script> 
+                </div>
                 
-                       
-            </div>
         </main>
         <footer class="site-footer">
         <div class="site-wrapper">
-    
             <div class="info">
                 <p>Solar System</p>
                 <p>A sleek, modern Jekyll theme for personal websites.</p>
                 <p>&copy; 2019 Personal Jekyll Themes</p> 
             </div>
-    
-            <ul class="social">
-                <li>
-                    <a href="#">F</a>
-                </li>
-                <li>
-                    <a href="#">T</a>
-                </li>
-                <li>
-                    <a href="#">L</a>
-                </li>
-                <li>
-                    <a href="#">I</a>
-                </li>
-            </ul>
-    
         </div>
     </footer>
     </div>

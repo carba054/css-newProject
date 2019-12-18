@@ -31,14 +31,13 @@
                 <div class="site-branding">
                     <img class='test1'src="https://3.bp.blogspot.com/-q1eVC23lYgg/Wy92gTVOPRI/AAAAAAABnJY/kKeeK36klAI7h6M-qejxp5KEaXtjelcZgCLcBGAs/s1600/giphy.gif" alt="">
                     <h1 class="site-title"><a href="/css-newProject/">Solar System</a></h1>
-                    <!-- <p>HI</p> -->
                 </div>
 
                 <label for="site-nav-toggle" class="site-nav-toggle-label">Menu</label>
     <nav class="site-nav location- ">
-        <a href="/css-newProject/">Home</a>
+        <a class="current-page" href="/css-newProject/">Home</a>
         <div class="dropdown">
-            <a href="/" onclick="return false;">Planets</a></li>
+            <a class="dummy" href="/" onclick="return false;">Planets</a></li>
             <div class="dropdown-content ">
                 <ul>
                 
@@ -130,145 +129,115 @@
                     
                       
                 
-            </ul>
+                </ul>
             </div>
         </div>
-        
+        <a class="current-page" href="galery/">Gallery</a>
     
     </nav>
-    <script>
+<script>
+    
+
+
+    $(document).ready(function () {
+    $(window).on("resize", function (e) {
+        checkScreenSize();
+    });
+
+    checkScreenSize();
+
+    function checkScreenSize(){
+        var newWindowWidth = $(window).width();
+        if (newWindowWidth < 600) {
             $('.dropdown').click(function() {
-                if($('.dropdown-content').css('display') == 'none'){
-                    $('.dropdown-content').show('slow');
-                }else{
-                    $('.dropdown-content').hide('slow');
-                }
-                
+            if ( $('.dropdown-content').css('display') == 'none'){
+                $('.dropdown-content').show('slow'); 
+            }else{
+                $('.dropdown-content').hide('slow');
+            }
+              });
+        }
+        else
+        {
+            $('.dropdown').hover(function() {
+        
+            $('.dropdown-content').show('slow'); 
+            
+            }, function(){
+                $('.dropdown-content').hide('slow');
             });
-        </script>
+        }
+    }
+    });
+</script>
             </div>
         </header>
         <main class="site-content">
-            <div class="site-wrapper">
+            
                 
-                    <!-- <div class="page-video">
-                            <video  data-mute="true" loop muted autoplay>
-                                    <source src="https://solarsystem.nasa.gov/system/feature_items/webm_videos/515_MED_saturn_time_lapse_0001.webm
-                                    " type="video/webm">
+                <div class="site-grid">
+                    <div class="wrapper aligned">
+                <div class="box item1"><h1>Neptune</h1><h2>Introduction</h2>
+                        <p>Dark, cold and whipped by supersonic winds, ice giant Neptune is the eighth and most distant planet in our solar system. More than 30 times as far from the Sun as Earth, Neptune is the only planet in our solar system not visible to the naked eye. In 2011 Neptune completed its first 165-year orbit since its discovery in 1846.
+
+                        </p>
+                        <p>Neptune is so far from the Sun that high noon on the big blue planet would seem like dim twilight to us. The warm light we see here on our home planet is roughly 900 times as bright as sunlight on Neptune.
+
+                        </p>
+                        <p>The ice giant Neptune was the first planet located through mathematical calculations. Using predictions made by Urbain Le Verrier, Johann Galle discovered the planet in 1846. The planet is named after the Roman god of the sea, as suggested by Le Verrier
+
+                        </p>
+        
+                </div>
+                <div class="box item2">
+                        <div class="page-video">
+                                        <div id="test"></div>
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/LRui9K4GqHs?autoplay=1&mute=1&controls=0&loop=1&playlist=LRui9K4GqHs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" ></iframe>
                                         
-                            </video>
-                     </div> -->
-                <!-- <section class="card">
-
-        <h3>Introduction</h3>
-    
-        <p>Dark, cold and whipped by supersonic winds, ice giant Neptune is the eighth and most distant planet in our solar system. More than 30 times as far from the Sun as Earth, Neptune is the only planet in our solar system not visible to the naked eye. In 2011 Neptune completed its first 165-year orbit since its discovery in 1846.
-
-                Neptune is so far from the Sun that high noon on the big blue planet would seem like dim twilight to us. The warm light we see here on our home planet is roughly 900 times as bright as sunlight on Neptune.
-                
-                The ice giant Neptune was the first planet located through mathematical calculations. Using predictions made by Urbain Le Verrier, Johann Galle discovered the planet in 1846. The planet is named after the Roman god of the sea, as suggested by Le Verrier
-            </p>
-        <h3>Size and Distance</h3>
-        
-        <p>
-                With a radius of 15,299.4 miles (24,622 kilometers), Neptune is about four times wider than Earth. If Earth were the size of a nickel, Neptune would be about as big as a baseball.
-
-From an average distance of 2.8 billion miles (4.5 billion kilometers), Neptune is 30 astronomical units away from the Sun. One astronomical unit (abbreviated as AU), is the distance from the Sun to Earth. From this distance, it takes sunlight 4 hours to travel from the Sun to Neptune.
-</p>
-    
-            
-</section> -->
-                
-                    
-
-   
-    <div class="grid">
-        <div class="grid-main">
-            
-            <h1>Neptune</h1>
-            
-            <section class="card">
-
-        <h3>Introduction</h3>
-    
-        <p>Dark, cold and whipped by supersonic winds, ice giant Neptune is the eighth and most distant planet in our solar system. More than 30 times as far from the Sun as Earth, Neptune is the only planet in our solar system not visible to the naked eye. In 2011 Neptune completed its first 165-year orbit since its discovery in 1846.
-
-                Neptune is so far from the Sun that high noon on the big blue planet would seem like dim twilight to us. The warm light we see here on our home planet is roughly 900 times as bright as sunlight on Neptune.
-                
-                The ice giant Neptune was the first planet located through mathematical calculations. Using predictions made by Urbain Le Verrier, Johann Galle discovered the planet in 1846. The planet is named after the Roman god of the sea, as suggested by Le Verrier
-            </p>
-        <h3>Size and Distance</h3>
-        
-        <p>
-                With a radius of 15,299.4 miles (24,622 kilometers), Neptune is about four times wider than Earth. If Earth were the size of a nickel, Neptune would be about as big as a baseball.
-
-From an average distance of 2.8 billion miles (4.5 billion kilometers), Neptune is 30 astronomical units away from the Sun. One astronomical unit (abbreviated as AU), is the distance from the Sun to Earth. From this distance, it takes sunlight 4 hours to travel from the Sun to Neptune.
-</p>
-    
-            
-</section>
-
-        </div>
-
-        <div class="grid-sidebar">
-            <div class="page-video">
-
-                <!-- <div class="fade"></div>
-
-                <div class="star-wars">
-                    <div class="crawl">
-                    <div class="title">
-                        <p>Episode IV</p>
-                        <h1>A New Hope</h1>
-                    </div>
-                    
-                    <p>It is a period of civil war. Rebel spaceships, striking from a hidden base, have won their first victory against the evil Galactic Empire.</p>
+                                         
+                                <!-- <video  data-mute="true" loop muted autoplay>
+                                        <source src="https://solarsystem.nasa.gov/system/feature_items/webm_videos/515_MED_saturn_time_lapse_0001.webm
+                                        " type="video/webm">
+                                                
+                                </video> -->
+                        </div>
                         
-                        <p>During the battle, Rebel spies managed to steal secret plans to the Empire’s ultimate weapon, the DEATH STAR, an armored space station with enough power to destroy an entire planet.</p>
-                
-                    <p>Pursued by the Empire’s sinister agents, Princess Leia races home aboard her starship, custodian of the stolen plans that can save her people and restore freedom to the galaxy….</p>
-                    </div>
-                </div>         -->
-
-                    
-                
-                <video  data-mute="true" loop muted autoplay>
-                        <source src="https://solarsystem.nasa.gov/system/feature_items/webm_videos/515_MED_saturn_time_lapse_0001.webm
-                        " type="video/webm">
-                            
-                </video>
-            </div>
-        </div>
-    </div>
- 
-                
+                        <img class="box-img" src="https://huntpng.com/images250/png-neptune-8.png" alt="" />
+        
                        
-            </div>
+                        
+                </div>
+                <div class="box item3">
+                        <h2>Size and Distance</h2>
+                        <p>With a radius of 15,299.4 miles (24,622 kilometers), Neptune is about four times wider than Earth. If Earth were the size of a nickel, Neptune would be about as big as a baseball.</p>
+                        <p>From an average distance of 2.8 billion miles (4.5 billion kilometers), Neptune is 30 astronomical units away from the Sun. One astronomical unit (abbreviated as AU), is the distance from the Sun to Earth. From this distance, it takes sunlight 4 hours to travel from the Sun to Neptune.
+
+                        </p>
+                </div>
+                <div class="box item4">
+                        <h2>Orbit and Rotation</h2>
+                        <p>One day on Neptune takes about 16 hours (the time it takes for Neptune to rotate or spin once). And Neptune makes a complete orbit around the Sun (a year in Neptunian time) in about 165 Earth years (60,190 Earth days).</p>
+                        <p>Sometimes Neptune is even farther from the Sun than dwarf planet Pluto. Pluto's highly eccentric, oval-shaped orbit brings it inside Neptune's orbit for a 20-year period every 248 Earth years. This switch, in which Pluto is closer to the Sun than Neptune, happened most recently from 1979 to 1999. Pluto can never crash into Neptune, though, because for every three laps Neptune takes around the Sun, Pluto makes two. This repeating pattern prevents close approaches of the two bodies.</p>
+                        <p>Neptune’s axis of rotation is tilted 28 degrees with respect to the plane of its orbit around the Sun, which is similar to the axial tilts of Mars and Earth. This means that Neptune experiences seasons just like we do on Earth; however, since its year is so long, each of the four seasons lasts for over 40 years</p>
+                        
+                </div>
+                <div class="box item5">
+                        <h2>Formation</h2>
+                        <p>Neptune took shape when the rest of the solar system formed about 4.5 billion years ago, when gravity pulled swirling gas and dust in to become this ice giant. Like its neighbor Uranus, Neptune likely formed closer to the Sun and moved to the outer solar system about 4 billion years ago.
+                                </p>
+                </div>
+        </div>
+         
+                </div>
+                
         </main>
         <footer class="site-footer">
         <div class="site-wrapper">
-    
             <div class="info">
                 <p>Solar System</p>
                 <p>A sleek, modern Jekyll theme for personal websites.</p>
                 <p>&copy; 2019 Personal Jekyll Themes</p> 
             </div>
-    
-            <ul class="social">
-                <li>
-                    <a href="#">F</a>
-                </li>
-                <li>
-                    <a href="#">T</a>
-                </li>
-                <li>
-                    <a href="#">L</a>
-                </li>
-                <li>
-                    <a href="#">I</a>
-                </li>
-            </ul>
-    
         </div>
     </footer>
     </div>

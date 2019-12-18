@@ -31,14 +31,13 @@
                 <div class="site-branding">
                     <img class='test1'src="https://3.bp.blogspot.com/-q1eVC23lYgg/Wy92gTVOPRI/AAAAAAABnJY/kKeeK36klAI7h6M-qejxp5KEaXtjelcZgCLcBGAs/s1600/giphy.gif" alt="">
                     <h1 class="site-title"><a href="/css-newProject/">Solar System</a></h1>
-                    <!-- <p>HI</p> -->
                 </div>
 
                 <label for="site-nav-toggle" class="site-nav-toggle-label">Menu</label>
     <nav class="site-nav location- ">
-        <a href="/css-newProject/">Home</a>
+        <a class="current-page" href="/css-newProject/">Home</a>
         <div class="dropdown">
-            <a href="/" onclick="return false;">Planets</a></li>
+            <a class="dummy" href="/" onclick="return false;">Planets</a></li>
             <div class="dropdown-content ">
                 <ul>
                 
@@ -130,217 +129,118 @@
                     
                       
                 
-            </ul>
+                </ul>
             </div>
         </div>
-        
+        <a class="current-page" href="galery/">Gallery</a>
     
     </nav>
-    <script>
+<script>
+    
+
+
+    $(document).ready(function () {
+    $(window).on("resize", function (e) {
+        checkScreenSize();
+    });
+
+    checkScreenSize();
+
+    function checkScreenSize(){
+        var newWindowWidth = $(window).width();
+        if (newWindowWidth < 600) {
             $('.dropdown').click(function() {
-                if($('.dropdown-content').css('display') == 'none'){
-                    $('.dropdown-content').show('slow');
-                }else{
-                    $('.dropdown-content').hide('slow');
-                }
-                
+            if ( $('.dropdown-content').css('display') == 'none'){
+                $('.dropdown-content').show('slow'); 
+            }else{
+                $('.dropdown-content').hide('slow');
+            }
+              });
+        }
+        else
+        {
+            $('.dropdown').hover(function() {
+        
+            $('.dropdown-content').show('slow'); 
+            
+            }, function(){
+                $('.dropdown-content').hide('slow');
             });
-        </script>
+        }
+    }
+    });
+</script>
             </div>
         </header>
         <main class="site-content">
-            <div class="site-wrapper">
+            
                 
-                    <!-- <div class="page-video">
-                            <video  data-mute="true" loop muted autoplay>
-                                    <source src="https://solarsystem.nasa.gov/system/feature_items/webm_videos/515_MED_saturn_time_lapse_0001.webm
-                                    " type="video/webm">
+                <div class="site-grid">
+                    <div class="wrapper aligned">
+        <div class="box item1"><h1>Saturn</h1><h2>Introduction</h2>
+                <p>Saturn is the sixth planet from the Sun and the second largest planet in our solar system. Adorned with a dazzling system of icy rings, Saturn is unique among the planets. It is not the only planet to have rings, but none are as spectacular or as complex as Saturn's. Like fellow gas giant Jupiter, Saturn is a massive ball made mostly of hydrogen and helium.
+
+                </p>
+                <p>Surrounded by more than 60 known moons, Saturn is home to some of the most fascinating landscapes in our solar system. From the jets of water that spray from Enceladus to the methane lakes on smoggy Titan, the Saturn system is a rich source of scientific discovery and still holds many mysteries.
+
+                </p>
+                <p>The farthest planet from Earth discovered by the unaided human eye, Saturn has been known since ancient times. The planet is named for the Roman god of agriculture and wealth, who was also the father of Jupiter.
+
+                </p>
+
+        </div>
+        <div class="box item2">
+                <div class="page-video">
+                                <!-- <div id="test"></div>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/3afEX8a2jPg?autoplay=1&mute=1&controls=0&loop=1&playlist=3afEX8a2jPg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" ></iframe>
+                                 -->
+                        <video  data-mute="true" loop muted autoplay>
+                                <source src="https://solarsystem.nasa.gov/system/feature_items/webm_videos/515_MED_saturn_time_lapse_0001.webm
+                                " type="video/webm">
                                         
-                            </video>
-                     </div> -->
-                <!-- <section class="card">
-
-        <h3>Introduction</h3>
-    
-        <p>
-                Saturn is the sixth planet from the Sun and the second largest planet in our solar system. Adorned with a dazzling system of icy rings, Saturn is unique among the planets. It is not the only planet to have rings, but none are as spectacular or as complex as Saturn's. Like fellow gas giant Jupiter, Saturn is a massive ball made mostly of hydrogen and helium.
-
-Surrounded by more than 60 known moons, Saturn is home to some of the most fascinating landscapes in our solar system. From the jets of water that spray from Enceladus to the methane lakes on smoggy Titan, the Saturn system is a rich source of scientific discovery and still holds many mysteries.
-
-The farthest planet from Earth discovered by the unaided human eye, Saturn has been known since ancient times. The planet is named for the Roman god of agriculture and wealth, who was also the father of Jupiter.
-        
-            </p>
-        <h3>Size and Distance</h3>
-        
-        <p>
-                With a radius of 36,183.7 miles (58,232 kilometers), Saturn is 9 times wider than Earth. If Earth were the size of a nickel, Saturn would be about as big as a volleyball.
-
-                From an average distance of 886 million miles (1.4 billion kilometers), Saturn is 9.5 astronomical units away from the Sun. One astronomical unit (abbreviated as AU), is the distance from the Sun to Earth. From this distance, it takes sunlight 80 minutes to travel from the Sun to Saturn.
-            </p>
-    
-            
-</section>
- 
-<ul class="gallery">
-        <li class="portrait">
-            <a href="#">
-                <img src="https://images.unsplash.com/photo-1574691846448-a57783c8e4ff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80">
-            </a>
-        </li>
-        <li class="portrait">
-            <a href="#">
-                <img src="https://images.unsplash.com/photo-1574641880131-7c6dedb30529?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80">
-            </a>
-        </li>
-        <li class="landscape">
-            <a href="#">
-                <img src="https://images.unsplash.com/photo-1475738198235-4b30fc20cff4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=80">
-            </a>
-        </li>
-        <li class="portrait">
-            <a href="#">
-                <img src="https://images.unsplash.com/photo-1574541647814-539094e8ffd1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80">
-            </a>
-        </li>
-        <li class="landscape">
-            <a href="#">
-                <img src="https://images.unsplash.com/photo-1475738198235-4b30fc20cff4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=80">
-            </a>
-        </li>
-            
-        <li class="portrait">
-            <a href="#">
-                <img src="https://images.unsplash.com/photo-1574675236606-3e16fcf30fde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80">
-            </a>
-        </li>
-    </ul> -->
+                        </video>
+                </div>
                 
-                    
+                <img class="box-img" src="https://www.stickpng.com/assets/images/580b585b2edbce24c47b270d.png" alt="" />
 
-   
-    <div class="grid">
-        <div class="grid-main">
-            
-            <h1>Saturn</h1>
-            
-            <section class="card">
-
-        <h3>Introduction</h3>
-    
-        <p>
-                Saturn is the sixth planet from the Sun and the second largest planet in our solar system. Adorned with a dazzling system of icy rings, Saturn is unique among the planets. It is not the only planet to have rings, but none are as spectacular or as complex as Saturn's. Like fellow gas giant Jupiter, Saturn is a massive ball made mostly of hydrogen and helium.
-
-Surrounded by more than 60 known moons, Saturn is home to some of the most fascinating landscapes in our solar system. From the jets of water that spray from Enceladus to the methane lakes on smoggy Titan, the Saturn system is a rich source of scientific discovery and still holds many mysteries.
-
-The farthest planet from Earth discovered by the unaided human eye, Saturn has been known since ancient times. The planet is named for the Roman god of agriculture and wealth, who was also the father of Jupiter.
-        
-            </p>
-        <h3>Size and Distance</h3>
-        
-        <p>
-                With a radius of 36,183.7 miles (58,232 kilometers), Saturn is 9 times wider than Earth. If Earth were the size of a nickel, Saturn would be about as big as a volleyball.
-
-                From an average distance of 886 million miles (1.4 billion kilometers), Saturn is 9.5 astronomical units away from the Sun. One astronomical unit (abbreviated as AU), is the distance from the Sun to Earth. From this distance, it takes sunlight 80 minutes to travel from the Sun to Saturn.
-            </p>
-    
-            
-</section>
- 
-<ul class="gallery">
-        <li class="portrait">
-            <a href="#">
-                <img src="https://images.unsplash.com/photo-1574691846448-a57783c8e4ff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80">
-            </a>
-        </li>
-        <li class="portrait">
-            <a href="#">
-                <img src="https://images.unsplash.com/photo-1574641880131-7c6dedb30529?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80">
-            </a>
-        </li>
-        <li class="landscape">
-            <a href="#">
-                <img src="https://images.unsplash.com/photo-1475738198235-4b30fc20cff4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=80">
-            </a>
-        </li>
-        <li class="portrait">
-            <a href="#">
-                <img src="https://images.unsplash.com/photo-1574541647814-539094e8ffd1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80">
-            </a>
-        </li>
-        <li class="landscape">
-            <a href="#">
-                <img src="https://images.unsplash.com/photo-1475738198235-4b30fc20cff4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=80">
-            </a>
-        </li>
-            
-        <li class="portrait">
-            <a href="#">
-                <img src="https://images.unsplash.com/photo-1574675236606-3e16fcf30fde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80">
-            </a>
-        </li>
-    </ul>
-
+               
+                
         </div>
+        <div class="box item3">
+                <h2>Size and Distance</h2>
+                <p>With a radius of 36,183.7 miles (58,232 kilometers), Saturn is 9 times wider than Earth. If Earth were the size of a nickel, Saturn would be about as big as a volleyball.</p>
+                <p>From an average distance of 886 million miles (1.4 billion kilometers), Saturn is 9.5 astronomical units away from the Sun. One astronomical unit (abbreviated as AU), is the distance from the Sun to Earth. From this distance, it takes sunlight 80 minutes to travel from the Sun to Saturn.
 
-        <div class="grid-sidebar">
-            <div class="page-video">
-
-                <!-- <div class="fade"></div>
-
-                <div class="star-wars">
-                    <div class="crawl">
-                    <div class="title">
-                        <p>Episode IV</p>
-                        <h1>A New Hope</h1>
-                    </div>
-                    
-                    <p>It is a period of civil war. Rebel spaceships, striking from a hidden base, have won their first victory against the evil Galactic Empire.</p>
-                        
-                        <p>During the battle, Rebel spies managed to steal secret plans to the Empire’s ultimate weapon, the DEATH STAR, an armored space station with enough power to destroy an entire planet.</p>
-                
-                    <p>Pursued by the Empire’s sinister agents, Princess Leia races home aboard her starship, custodian of the stolen plans that can save her people and restore freedom to the galaxy….</p>
-                    </div>
-                </div>         -->
-
-                    
-                
-                <video  data-mute="true" loop muted autoplay>
-                        <source src="https://solarsystem.nasa.gov/system/feature_items/webm_videos/515_MED_saturn_time_lapse_0001.webm
-                        " type="video/webm">
-                            
-                </video>
-            </div>
+                </p>
         </div>
-    </div>
- 
+        <div class="box item4">
+                <h2>Orbit and Rotation</h2>
+                <p>Saturn has the second-shortest day in the solar system. One day on Saturn takes only 10.7 hours (the time it takes for Saturn to rotate or spin around once), and Saturn makes a complete orbit around the Sun (a year in Saturnian time) in about 29.4 Earth years (10,756 Earth days).
+
+                </p>
+                <p>Its axis is tilted by 26.73 degrees with respect to its orbit around the Sun, which is similar to Earth's 23.5-degree tilt. This means that, like Earth, Saturn experiences seasons.
+
+                </p>
                 
-                       
-            </div>
+        </div>
+        <div class="box item5">
+                <h2>Formation</h2>
+                <p>Saturn took shape when the rest of the solar system formed about 4.5 billion years ago, when gravity pulled swirling gas and dust in to become this gas giant. About 4 billion years ago, Saturn settled into its current position in the outer solar system, where it is the sixth planet from the Sun. Like Jupiter, Saturn is mostly made of hydrogen and helium, the same two main components that make up the Sun.
+                </p>
+                
+        </div>
+</div>
+ 
+                </div>
+                
         </main>
         <footer class="site-footer">
         <div class="site-wrapper">
-    
             <div class="info">
                 <p>Solar System</p>
                 <p>A sleek, modern Jekyll theme for personal websites.</p>
                 <p>&copy; 2019 Personal Jekyll Themes</p> 
             </div>
-    
-            <ul class="social">
-                <li>
-                    <a href="#">F</a>
-                </li>
-                <li>
-                    <a href="#">T</a>
-                </li>
-                <li>
-                    <a href="#">L</a>
-                </li>
-                <li>
-                    <a href="#">I</a>
-                </li>
-            </ul>
-    
         </div>
     </footer>
     </div>

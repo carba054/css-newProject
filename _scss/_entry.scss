@@ -2,9 +2,8 @@
 	
 	position: relative;
 	z-index: 30;
-	top: -3em;
-	box-shadow: 0 0 1em 0 rgba(0,0,0,0.1);
-	margin-bottom: 3em;
+	top: -2em;
+	margin-bottom: 1em;
 	
 	@include bp(mobile) {
 		padding-bottom: 0.1em;
@@ -16,23 +15,6 @@
 	}
 }
 
-// img.item-img {
-  
-//     &.move-to-cart{
-//       position:absolute;
-//       height:200px;
-//       width:200px;
-//       z-index:9999;
-  
-//       &.animate{
-//         opacity:1;
-//         height:75px;
-//         width:75px;
-//         transition:all 1.5s ease-in-out;
-// 	  }
-
-// 	}
-// }
 
 .entry-media {
 	width: 480px;
@@ -60,13 +42,14 @@
 	@include bp(desktop) {
 		flex: 0 0 50%;
 	}
+	@include bp(mobile) {
+		width: 280px;
+		height: 280px;
+
+	}
 }
 
-.entry-media:before {
-	display: block;
-	
-	padding-top: 80%;
-}
+
 
 .entry-media img {
 	display: none;
@@ -90,27 +73,18 @@
 	h3 a{
 		text-decoration: none;
 	}
-	// background: #FFF;
-	// position: relative;
 	
-	// z-index: 20;
-	// box-shadow: 0 0 1.5em 0 rgba(0,0,0,0.07);
-	// padding: 2em;
 	position: relative;
-	//width: 50%;
 	height: 35%;
-	
 	padding: 10px;
-	border-radius: 5px;
-	border: solid lightblue;
+	border-radius: 15px;
 	background: lightblue;
 	
 	@include bp(desktop) {
 		flex-grow: 1;
 		margin: 2em 2em 2em -2em;
 	}
-	
-	
+
 	
 }
 
@@ -118,13 +92,11 @@
 
 	content:"";
 	position: absolute;
-	//left: 100%;
 	top: 26px;
 	width: 0;
 	height: 0;
 	
 	border-top: 13px solid transparent;
-	// border-left: 26px solid lightblue;
 	border-bottom: 13px solid transparent;
 }
 
@@ -135,8 +107,6 @@
 		position: absolute;
 		top: 0;
 		left: 50%;
-		width: 0;
-		height: 0;
 		border: 20px solid transparent;
 		border-bottom-color: lightblue;
 		border-top: 0;
@@ -155,8 +125,6 @@
 		position: absolute;
 		top: 0;
 		left: 50%;
-		width: 0;
-		height: 0;
 		border: 20px solid transparent;
 		border-bottom-color: lightblue;
 		border-top: 0;
@@ -194,9 +162,8 @@
 	}
 }
 
-.entry-content,
-.entry:nth-child(even) .entry-content {
+.entry-content{
 	@include bp(mobile) {
-		margin: -2em 2em 2em 2em;
+		margin: 0em 0em 0em 0em;
 	}
 }
